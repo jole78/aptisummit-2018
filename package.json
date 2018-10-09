@@ -1,0 +1,17 @@
+{
+    "name": "aptisummit-2018",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/jole78/aptisummit-2018.git",
+    "author": "Johan Leino <johan.leino@aptitud.se>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "mdx-deck": "^1.7.7",
+        "react-syntax-highlighter": "^9.0.0"
+    },
+    "scripts": {
+        "start": "mdx-deck index.mdx --no-open",
+        "build": "mdx-deck build index.mdx"
+    }
+}
