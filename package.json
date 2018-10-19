@@ -8,7 +8,9 @@
     "private": true,
     "dependencies": {
         "mdx-deck": "^1.7.7",
-        "react-syntax-highlighter": "^9.0.0"
+        "mdx-live": "^2.0.0-alpha.2",
+        "react-syntax-highlighter": "^9.0.0",
+        "styled-components": "^4.0.2"
     },
     "scripts": {
         "start": "mdx-deck index.mdx --no-open",
