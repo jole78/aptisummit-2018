@@ -1,0 +1,350 @@
+export { default as theme } from "./theme";
+import { Split } from 'mdx-deck/layouts';
+import { Appear, Image, Notes, Head } from 'mdx-deck';
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import {CenteredLayout} from './layouts';
+
+<Head>
+    <title>AptiSummit 2018</title>
+</Head>
+
+export default CenteredLayout
+
+# CSS
+## -- roligare än någonsin --
+
+<Notes>
+lika roligt som 1999 - förmodligen ännu roligare nu
+</Notes>
+
+---
+<Image src="./assets/history-of-the-web.jpg" size="contain" height="80vh" />
+
+---
+<Image src="./assets/batman.gif" size="contain" height="80vh" />
+
+---
+export default CenteredLayout
+
+## CSS - VAD BEHÖVER MAN KUNNA SOM FRONTENDARE?
+---
+export default CenteredLayout
+
+## 1. IMPLEMENTERA LAYOUTER
+## 2. POSITIONERA ELEMENT
+
+<Image src="./assets/css-is-hard.gif" size="contain" height="50vh" />
+
+<Notes>
+- LAYOUTER (som funkar på olika skärmstorlekar också)
+- POSITIONERA GREJER (och lägga saker på en rak linje tex.)
+- Tyvärr inte alltid så enkelt...eller??
+- Designskills är nåt annat
+- Men, det är inte 1999 längre...det har hänt såå mycket på CSS sidan sen dess
+</Notes>
+
+---
+<Image src="./assets/back-to-the-future.gif" size="contain" height="70vh" />
+
+<Notes>
+ - vi ska åka tidsmaskin
+ - men precis som i tillbaka till framtiden så åker vi kanske inte alltid i kronologisk ordning
+ - vi får väl se hur det går
+</Notes>
+
+---
+export default CenteredLayout
+
+## ~2015
+### --- FLEXBOX ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+<Notes>
+från 2009 till 2015. Stabil from 2015
+</Notes>
+
+---
+<Image src="./assets/flexbox-example.png" size="contain" height="80vh" />
+
+<Notes>
+lägga saker på en rak linje så här...det är flexboxen rätt vass på.
+lite om vad en flexbox är
+</Notes>
+
+---
+EXEMPEL KOD FLEXBOX
+
+
+---
+export default CenteredLayout
+
+## ~2017
+### --- CSS GRID ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+<Notes>
+från 2012 till 2017. Stabil from 2017
+</Notes>
+
+---
+<Image src="./assets/css-grid-example.png" size="contain" width="80vw" />
+
+---
+<Image src="./assets/css-grid-example-2.png" size="contain" width="80vw" />
+
+---
+KOD EXEMPEL GRID
+
+---
+export default CenteredLayout
+
+## ~2013
+### --- AUTO PREFIXER ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+
+---
+KOD EXEMPEL AUTOPREFIXER
+
+---
+
+* layout (från bootstrap till css grid)
+* positionering (från floats till flex) - block element eller inline element etc
+* autoprefixer
+* css is a mess
+* bem => css modules
+* css in js
+
+---
+
+---
+
+---
+export default CenteredLayout
+
+## FLEXBOX
+
+<Image src="./assets/flexbox-1.PNG" size="contain" height="50vh" width="70vw" />
+
+```notes
+aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word "flex").
+```
+---
+## CSS GRID
+
+```notes
+2-dimensionellt system. baserat på rader och kolumner, som excel ungefär.
+skillnaden mot flexboxen är att med flexbox så bestämmer man "up front" om det är en horisontell flexbox eller en vertikal flexbox (rader eller kolumner)
+```
+---
+<Image src="./assets/grid-example-1.png" size="contain" height="80vh" width="70vw" />
+
+---
+## MED tex. BOOTSTRAP
+
+```html
+<div class="row">
+    <div class="col-xs-12 header">HEADER</div>
+</div>
+<div class="row">
+    <div class="col-xs-4 menu">MENU</div>
+    <div class="col-xs-8 content">CONTENT</div>
+</div>
+<div class="row">
+    <div class="col-xs-12 footer">FOOTER</div>
+</div>
+
+```
+
+---
+## OCH OM DEN SKA VARA RESPONSIV
+
+---
+## MED CSS GRID
+
+```html
+<div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+</div>
+```
+```css
+.center { /* thing to center */
+  margin: auto;
+}
+```
+---
+<CodeSurfer
+    title="MED CSS GRID"
+    code={require("!raw-loader!./examples/css-grid.mdx")}
+    lang="markup"
+    showNumbers={false}    
+    steps={[
+        {range: [1, 6]},
+        {lines: [1], range: [8, 12]},
+        {ranges: [[2,5], [14,28]]},    
+    ]}
+/>
+
+---
+export { components } from "mdx-deck-code-surfer"
+
+```markup CSS GRID
+<div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+</div>
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 100px 40px;
+}
+
+.header {
+    grid-column: span 12;
+}
+
+.menu {
+    grid-column: span 4;
+}
+
+.content {
+    grid-column: span 8;
+}
+
+.footer {
+    grid-column: span 12;
+}
+----
+1:6
+1, 8:12
+2:5, 14:28
+
+```
+
+---
+
+```css
+body, html {
+  height: 100%;
+  display: grid;
+}
+.center { /* thing to center */
+  margin: auto;
+}
+```
+---
+import Grid, {CenterInGrid} from "./components/Grid.jsx"
+
+<Grid>
+    <CenterInGrid>I'm in the CENTER of attention</CenterInGrid>
+</Grid>
+
+---
+## AUTO PREFIXER
+
+---
+![](./assets/autoprefixer.png)
+
+---
+## DU SKRIVER 4 RADER CSS
+
+```css
+    display: grid;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+```
+
+---
+```css
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);    
+```
+---
+
+
+
+```
+
+---
+## CSS-in-JS
+
+```notes
+Från CSS modules är steget egentligen inte särskilt långt till att faktiskt flytta in CSS:en i javascriptet.
+Då kan vi nyttja en massa andra saker som javascript till exempel
+```
+
+---
+
+
+```notes
+Det finns massor av CSS-in-JS bibliotek.
+Många av dem specialskriva för ett visst ramverk (tex React och styled-components som i exemplet).
+Oftast använder man css syntax eller objektsyntax (dvs man gör javascript objekt med css i)
+Det vi ser i exemplet ovan är ett ramverk som heter styled-components och det fungerar bara ihop med React
+```
+
+---
+## STYLED COMPONENTS
+
+```notes
+Ett av problemen med SCSS eller LESS (abstraktioner för att skriva CSS) eller för den delen CSS modules är att man fortfarande
+måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att switcha mellan olika css klasser.
+```
+
+---
+
+<CodeSurfer 
+    code={require("!raw-loader!./examples/button-css-modules.js")}
+    lang="jsx"
+    showNumbers={true}    
+    steps={[
+        { notes: "Making a button with css-modules"},
+        {lines: [9, 28], notes: "Start with the button class"},
+        {range: [11,13], notes: "If the component has the error prop"}
+    ]}
+/>
+
+
+
+---
+Samma exempel men med SC. Prata om string interpolation
+
+---
+Fler exempel med saker man kan göra med SC. 
+Det är bara CSS, visa nesting, colors, theming, mixins etc...
+
+---
+export default CenteredLayout
+
+## I´M BATMAN AGAIN!!
+<Image src="./assets/batman.gif" size="contain" height="70vh" />
+
+---
+## TIPS & TRICKS
+
+- Layout vs Styling
+- Aldrig margins på komponenter
+
+
+

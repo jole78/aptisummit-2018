@@ -1,126 +1,180 @@
 export { default as theme } from "./theme";
-import { Split } from 'mdx-deck/layouts'
-import {CenteredLayout} from './layouts'
+import { Split } from 'mdx-deck/layouts';
+import { Appear, Image, Notes, Head } from 'mdx-deck';
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import {CenteredLayout} from './layouts';
 
+<Head>
+    <title>AptiSummit 2018</title>
+</Head>
+
+export default CenteredLayout
 
 # CSS
 ## -- roligare än någonsin --
 
----
-```css
-    .parent {
-        position: relative;
-    }
-    .center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-```
----
-import {Center} from "./components"
-import {Relative} from "./components/Position.jsx"
-
-<Relative>
-    <Center>I'm in the CENTER of attention</Center>
-</Relative>
+<Notes>
+lika roligt som 1999 - förmodligen ännu roligare nu
+</Notes>
 
 ---
-## FLEXBOX
+<Image src="./assets/history-of-the-web.jpg" size="contain" height="80vh" />
 
 ---
-```css
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-```
----
-import FlexBox from "./components/FlexBox.jsx"
-
-<FlexBox>
-    I'm in the CENTER of attention
-</FlexBox>
+<Image src="./assets/batman.gif" size="contain" height="80vh" />
 
 ---
-## GRID
+export default CenteredLayout
+
+## CSS - VAD BEHÖVER MAN KUNNA SOM FRONTENDARE?
+---
+export default CenteredLayout
+
+## 1. IMPLEMENTERA LAYOUTER
+## 2. POSITIONERA ELEMENT
+
+<Image src="./assets/css-is-hard.gif" size="contain" height="50vh" />
+
+<Notes>
+- LAYOUTER (som funkar på olika skärmstorlekar också)
+- POSITIONERA GREJER (och lägga saker på en rak linje tex.)
+- Tyvärr inte alltid så enkelt...eller??
+- Designskills är nåt annat
+- Men, det är inte 1999 längre...det har hänt såå mycket på CSS sidan sen dess
+</Notes>
 
 ---
-```css
-body, html {
-  height: 100%;
-  display: grid;
-}
-.center { /* thing to center */
-  margin: auto;
-}
-```
----
-import Grid, {CenterInGrid} from "./components/Grid.jsx"
+<Image src="./assets/back-to-the-future.gif" size="contain" height="70vh" />
 
-<Grid>
-    <CenterInGrid>I'm in the CENTER of attention</CenterInGrid>
-</Grid>
+<Notes>
+ - vi ska åka tidsmaskin
+ - men precis som i tillbaka till framtiden så åker vi kanske inte alltid i kronologisk ordning
+ - vi får väl se hur det går
+</Notes>
 
 ---
-## AUTO PREFIXER
+export default CenteredLayout
+
+## ~2015
+### --- FLEXBOX ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+<Notes>
+från 2009 till 2015. Stabil from 2015
+</Notes>
 
 ---
-![](./assets/autoprefixer.png)
+<Image src="./assets/flexbox-example.png" size="contain" height="80vh" />
+
+<Notes>
+lägga saker på en rak linje så här...det är flexboxen rätt vass på.
+lite om vad en flexbox är
+</Notes>
 
 ---
-## DU SKRIVER 4 RADER CSS
+EXEMPEL KOD FLEXBOX
 
-```css
-    display: grid;
-    transition: all .5s;
-    user-select: none;
-    background: linear-gradient(to bottom, white, black);
-```
 
 ---
-```css
-    display: -ms-grid;
-    display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -webkit-linear-gradient(top, white, black);
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);    
-```
+export default CenteredLayout
+
+## ~2017
+### --- CSS GRID ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+<Notes>
+från 2012 till 2017. Stabil from 2017
+</Notes>
+
+---
+<Image src="./assets/css-grid-example.png" size="contain" width="80vw" />
+
+---
+<Image src="./assets/css-grid-example-2.png" size="contain" width="80vw" />
+
+---
+KOD EXEMPEL GRID
+
+---
+export default CenteredLayout
+
+## ~2013
+### --- AUTO PREFIXER ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+
+---
+KOD EXEMPEL AUTOPREFIXER
+
 ---
 export default CenteredLayout
 
 ## WHEN CSS BECOMES A MESS
-![](./assets/css-is-a-mess.gif)
+<Image src="./assets/css-is-a-mess.gif" size="contain" height="60vh" />
 
 ---
-![](./assets/css-becomes-a-mess.png)
+<Image src="./assets/css-becomes-a-mess.PNG" size="contain" height="80vh" />
 
 ---
-![](./assets/css-becomes-a-mess-2.png)
+<Image src="./assets/css-becomes-a-mess-2.PNG" size="contain" height="60vh" />
+
+---
+<Image src="./assets/bad-css.jpeg" size="contain" height="80vh" />
+
+<Notes>
+Varför måste vi använda !important egentligen?
+"Never mind the cascade" 
+</Notes>
 
 ---
 export default CenteredLayout
 
-## THERE IS A BETTER WAY
-[INSERT IMAGE HERE]
+## ~2015
+### --- CSS MODULES ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
 
 ---
-## COMPONENT SCOPED STYLES
+export default CenteredLayout
+
+## BEM (Block Element Modifier)
+
+<Image src="./assets/BEM.png" size="contain" height="60vh" width="70vw" />
 
 ---
-Styled Components and what it's all about
+<Image src="./assets/css-modules.png" size="contain"  height="80vh" />
 
+<Notes>
+egentligen är det samma sak som BEM men vi slipper hitta på klassnamn.
+"A CSS Module is a CSS file in which all class names and animation names are scoped locally by default"
+</Notes>
+
+---
+<Image src="./assets/css-modules-structure.png" size="contain" height="80vh" />
+
+<Notes>
+vi kan se att modulen/komponenten hör ihop med sin css.
+vi kan vara säkra på att den CSS:en bara hör till den komponenten
+</Notes>
+
+---
+export default CenteredLayout
+
+## ~2016
+### --- CSS-IN-JS ---
+
+<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+---
+<Image src="./assets/css-in-js.png" size="contain" height="80vh" />
+
+---
+EXEMPEL PÅ CSS-IN-JS
+
+---
+SLUT
 
 

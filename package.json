@@ -8,11 +8,13 @@
     "private": true,
     "dependencies": {
         "mdx-deck": "^1.7.7",
+        "mdx-deck-code-surfer": "^0.5.3",
+        "raw-loader": "^0.5.1",
         "react-syntax-highlighter": "^9.0.0",
         "styled-components": "^4.0.2"
     },
     "scripts": {
-        "start": "mdx-deck index.mdx --no-open",
+        "start": "mdx-deck index.mdx --port=9000 --no-open",
         "build": "yarn assets && mdx-deck build index.mdx",
         "assets": "mkdir -p dist && cp -R assets dist/"
     }
