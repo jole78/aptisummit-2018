@@ -1,0 +1,23 @@
+import styled from 'styled-components'
+import { space, width, color } from 'styled-system'
+
+const Box = styled.div`
+  ${space}
+  ${width}
+  ${color}
+`
+
+// width: 50%
+<Box width={1/2} />
+
+// margin: 16px (theme.space[2])
+<Box m={2} />
+
+// margin-top: 8px (theme.space[1])
+<Box mt={1} />
+
+// padding-top + padding-bottom: 32px (theme.space[3])
+<Box py={3} />
+
+// responsive width
+<Box width={[ 1, 1/2, 1/4 ]} />

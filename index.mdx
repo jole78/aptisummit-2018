@@ -234,7 +234,7 @@ Då kan vi nyttja en massa andra saker som javascript till exempel
 />
 
 ```notes
-Ett av problemen med SCSS eller LESS (abstraktioner för att skriva CSS) eller för den delen CSS modules är att man fortfarande
+Ett av problemen med CSS modules är att man fortfarande
 måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att switcha mellan olika css klasser.
 ```
 
@@ -243,7 +243,7 @@ måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att s
 <CodeSurfer 
     code={require("!raw-loader!./examples/button-css-in-js.js")}
     lang="jsx"
-    showNumbers={false}
+    showNumbers={true}
     title="A Button with css-in-js"    
     steps={[
         {range: [13, 24]},
@@ -254,7 +254,41 @@ måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att s
 ```notes
 * Med styled-components använder man string interpolation, dvs man kan analysera innehållet i strängen.
 * är det en funktion så ropar man på funktionen med dom props som komponenten fick in, dvs error=true
+
+* ett fantastiskt bibliotek som utnyttjar just css som ett antal utility funktioner är styled-system
 ```
+
+---
+<Image src="./assets/styled-system.png" size="contain" height="80vh" />
+
+---
+<CodeSurfer 
+    code={require("!raw-loader!./examples/styled-system.mdx")}
+    lang="jsx"
+    showNumbers={false}
+    title="Styled System"    
+    steps={[
+        {lines: [4, 8]},
+        {lines: [4, 8], range: [10,11] },
+        {lines: [4, 8], range: [13,17] },
+        {lines: [4, 8], range: [19,20] },
+        {lines: [4, 8], range: [22,23] },
+    ]}
+/>
+
+---
+    
+<CodeSurfer 
+    code={require("!raw-loader!./examples/media-templates.jsx")}
+    lang="jsx"
+    showNumbers={false}
+    title="Media Templates"    
+    steps={[
+        {range: [3,7]},
+        {range: [10,18]},
+        {range: [20,38]},
+    ]}
+/>
 
 ---
 <Image src="./assets/batman.gif" size="contain" height="80vh" />
@@ -264,9 +298,7 @@ måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att s
 * med hjälp av flexbox, css grid, autoprefixer och css-in-js
 ```
 ---
-export default CenteredLayout
 
-# CSS
-## -- THE END --
+<Image src="./assets/slut.jpg" size="contain" height="80vh" />
 
 
