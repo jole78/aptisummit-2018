@@ -43,7 +43,6 @@ export default CenteredLayout
 - LAYOUTER (som funkar på olika skärmstorlekar också)
 - POSITIONERA GREJER (och lägga saker på en rak linje tex.)
 - Tyvärr inte alltid så enkelt...eller??
-- Designskills är nåt annat
 - Men, det är inte 1999 längre...det har hänt såå mycket på CSS sidan sen dess
 ```
 
@@ -132,77 +131,7 @@ export default CenteredLayout
 ```notes
 **på slutet**
 * "men Johan, funkar det här i alla browsers egentligen...japp GRID funkar ända ner till IE10 faktiskt
-* men vi behöver vendor prefixes
-```
-
----
-export default CenteredLayout
-
-## ~2013
-### --- AUTO PREFIXER ---
-
-<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
-
-
----
-<Image src="./assets/autoprefixer-example.png" size="contain" height="80vh" />
-
----
-export default CenteredLayout
-
-## WHEN CSS BECOMES A MESS
-<Image src="./assets/css-is-a-mess.gif" size="contain" height="60vh" />
-
----
-<Image src="./assets/css-becomes-a-mess.PNG" size="contain" height="80vh" />
-
----
-<Image src="./assets/css-becomes-a-mess-2.PNG" size="contain" height="60vh" />
-
----
-<Image src="./assets/bad-css.jpeg" size="contain" height="80vh" />
-
-```notes
-* Varför måste vi använda !important egentligen?
-* hoppa över "the cascade" ....varför??
-```
-
----
-export default CenteredLayout
-
-## ~2015
-### --- CSS MODULES ---
-
-<Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
-
-```notes
-* Modulär CSS
-* eftersom vi skriver vår javascript i moduler kan vi göra detsamma med CSS:en
-* CSS:en hör liksom ihop med javascriptet på ett annat sätt
-* CSS Modules kommer från ett annat koncept, BEM
-```
-
----
-export default CenteredLayout
-
-## BEM (Block Element Modifier)
-
-<Image src="./assets/BEM.png" size="contain" height="60vh" width="70vw" />
-
----
-<Image src="./assets/css-modules.png" size="contain"  height="80vh" />
-
-```notes
-* egentligen är det samma sak som BEM men vi slipper hitta på klassnamn.
-* "A CSS Module is a CSS file in which all class names and animation names are scoped locally by default"
-```
-
----
-<Image src="./assets/css-modules-structure.png" size="contain" height="80vh" />
-
-```notes
-* vi kan se att modulen/komponenten hör ihop med sin css.
-* vi kan vara säkra på att den CSS:en bara hör till den komponenten
+* men vi behöver vendor prefixes, finns verktyg för att hantera sånt (tex autoprefixer)
 ```
 
 ---
@@ -213,12 +142,27 @@ export default CenteredLayout
 
 <Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
 
+```notes
+* VARFÖR CSS-IN-JS?
+* det handlar om modulär CSS
+* CSS-IN-JS kommer från CSS modules
+```
+---
+
+<Image src="./assets/css-modules-structure.png" size="contain" height="80vh" />
+
+```notes
+* "A CSS Module is a CSS file in which all class names and animation names are scoped locally by default"
+* samma sak gäller för CSS-IN-JS
+* så VAD är CSS-IN-JS då?
+```
+
 ---
 <Image src="./assets/css-in-js.png" size="contain" height="80vh" />
 
 ```notes
-Från CSS modules är steget egentligen inte särskilt långt till att faktiskt flytta in CSS:en i javascriptet.
-Då kan vi nyttja en massa andra saker som javascript till exempel
+* Från CSS modules är steget egentligen inte särskilt långt till att faktiskt flytta in CSS:en i javascriptet.
+* Då kan vi nyttja en massa andra saker som javascript till exempel
 ```
 ---
 
@@ -234,8 +178,8 @@ Då kan vi nyttja en massa andra saker som javascript till exempel
 />
 
 ```notes
-Ett av problemen med CSS modules är att man fortfarande
-måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att switcha mellan olika css klasser.
+* Ett av problemen med CSS modules är att man fortfarande måste hantera CSS klasser. 
+* Dvs du måste skriva logiken i javascript för att switcha mellan olika css klasser.
 ```
 
 ---
@@ -285,8 +229,56 @@ måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att s
     title="Media Templates"    
     steps={[
         {range: [3,7]},
-        {range: [10,18]},
-        {range: [20,38]},
+        {range: [9,17]},
+        {range: [19,36]},
+    ]}
+/>
+
+---
+<Image src="./assets/bad-css.jpeg" size="contain" height="80vh" />
+
+```notes
+* Varför måste vi använda !important egentligen?
+* hoppa över "the cascade" ....varför??
+
+---
+export default CenteredLayout
+
+## Styling a Boostrap Table
+
+```jsx
+import { Table as bsTable from "react-bootstrap";
+import styled from "styled-components";
+
+export const Table = styled(bsTable)`
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+`;
+```
+
+---
+<CodeSurfer 
+    code={require("!raw-loader!./examples/animations.jsx")}
+    lang="jsx"
+    showNumbers={false}
+    title="Animations"    
+    steps={[
+        {range: [2,10]},
+        {range: [12,17]},
+        {lines:[19]}      
+    ]}
+/>
+
+---
+<CodeSurfer 
+    code={require("!raw-loader!./examples/other-components.jsx")}
+    lang="jsx"
+    showNumbers={false}
+    title="Referring to Other Components"    
+    steps={[
+        {range: [1,7]},
+        {range: [15,17]},   
     ]}
 />
 
