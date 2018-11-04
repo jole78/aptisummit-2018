@@ -242,11 +242,10 @@ body, html {
 }
 ```
 ---
-import Grid, {CenterInGrid} from "./components/Grid.jsx"
+import {FlexBoxExample} from "./components/Grid.jsx"
 
-<Grid>
-    <CenterInGrid>I'm in the CENTER of attention</CenterInGrid>
-</Grid>
+<FlexBoxExample />
+
 
 ---
 ## AUTO PREFIXER
@@ -317,11 +316,11 @@ måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att s
 <CodeSurfer 
     code={require("!raw-loader!./examples/button-css-modules.js")}
     lang="jsx"
-    showNumbers={true}    
+    showNumbers={false}
+    title="A Button with css-modules"    
     steps={[
-        { notes: "Making a button with css-modules"},
-        {lines: [9, 28], notes: "Start with the button class"},
-        {range: [11,13], notes: "If the component has the error prop"}
+        {lines: [8, 27, 30]},
+        {range: [10,12], notes: "If the component has the error prop"}
     ]}
 />
 

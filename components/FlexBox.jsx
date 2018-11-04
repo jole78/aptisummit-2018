@@ -10,4 +10,8 @@ const FlexBox = styled.div`
     color: white;
 `;
 
-export default FlexBox;
+export default class Examples extends React.Component {
+    render() {
+        return <FlexBox>HELLO OM</FlexBox>;
+    }
+}

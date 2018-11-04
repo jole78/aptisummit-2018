@@ -13,20 +13,24 @@ export default CenteredLayout
 # CSS
 ## -- roligare än någonsin --
 
-<Notes>
-lika roligt som 1999 - förmodligen ännu roligare nu
-</Notes>
-
 ---
 <Image src="./assets/history-of-the-web.jpg" size="contain" height="80vh" />
 
+```notes
+* Jag började skriva CSS runt 1999-2000 ungefär
+* lika roligt som 1999 - förmodligen ännu roligare nu
+```
 ---
 <Image src="./assets/batman.gif" size="contain" height="80vh" />
+
+```notes
+* man kände sig lite som en superhjälte när man förstod hur CSS fungerade
+```
 
 ---
 export default CenteredLayout
 
-## CSS - VAD BEHÖVER MAN KUNNA SOM FRONTENDARE?
+## VIKTIGA CSS SKILLS SOM FRONTENDARE?
 ---
 export default CenteredLayout
 
@@ -35,22 +39,21 @@ export default CenteredLayout
 
 <Image src="./assets/css-is-hard.gif" size="contain" height="50vh" />
 
-<Notes>
+```notes
 - LAYOUTER (som funkar på olika skärmstorlekar också)
 - POSITIONERA GREJER (och lägga saker på en rak linje tex.)
 - Tyvärr inte alltid så enkelt...eller??
 - Designskills är nåt annat
 - Men, det är inte 1999 längre...det har hänt såå mycket på CSS sidan sen dess
-</Notes>
+```
 
 ---
 <Image src="./assets/back-to-the-future.gif" size="contain" height="70vh" />
 
-<Notes>
+```notes
  - vi ska åka tidsmaskin
- - men precis som i tillbaka till framtiden så åker vi kanske inte alltid i kronologisk ordning
- - vi får väl se hur det går
-</Notes>
+ - men precis som i "tillbaka till framtiden" så åker vi kanske inte alltid i kronologisk ordning
+```
 
 ---
 export default CenteredLayout
@@ -60,20 +63,37 @@ export default CenteredLayout
 
 <Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
 
-<Notes>
-från 2009 till 2015. Stabil from 2015
-</Notes>
+```notes
+* introducerades 2009.
+* stabil från 2015
+```
 
 ---
 <Image src="./assets/flexbox-example.png" size="contain" height="80vh" />
 
-<Notes>
-lägga saker på en rak linje så här...det är flexboxen rätt vass på.
-lite om vad en flexbox är
-</Notes>
+```notes
+* en flexibel box på svenska
+* lägga saker på en rak linje så här...det är flexboxen bra på
+* distribuera och positionera element inuti en container
+* även när elementens storlek är okänd, dvs "flex" eller flexibil
+```
 
 ---
-EXEMPEL KOD FLEXBOX
+```css
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+```
+
+```notes
+* en flexbox har huvudaxel - x eller y led, rows eller columns
+```
+
+---
+export default CenteredLayout
+
+<Image src="./assets/flexbox-3.PNG" size="contain" height="90vh" />
 
 
 ---
@@ -84,10 +104,10 @@ export default CenteredLayout
 
 <Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
 
-<Notes>
-från 2012 till 2017. Stabil from 2017
-</Notes>
-
+```notes
+* introducerades 2012.
+* stabil från 2017
+```
 ---
 <Image src="./assets/css-grid-example.png" size="contain" width="80vw" />
 
@@ -95,7 +115,25 @@ från 2012 till 2017. Stabil from 2017
 <Image src="./assets/css-grid-example-2.png" size="contain" width="80vw" />
 
 ---
-KOD EXEMPEL GRID
+<CodeSurfer
+    title="LAYOUT MED CSS GRID"
+    code={require("!raw-loader!./examples/css-grid.mdx")}
+    lang="markup"
+    showNumbers={false}    
+    steps={[
+        {range: [1, 5]},
+        {lines: [1], range: [7, 14]},
+        {lines: [2], ranges: [ [16, 17], [11, 13]]},
+        {lines: [3], ranges: [ [28, 29], [11, 13]]},
+        {lines: [4], ranges: [ [37, 38], [11, 13]]},
+    ]}
+/>
+
+```notes
+**på slutet**
+* "men Johan, funkar det här i alla browsers egentligen...japp GRID funkar ända ner till IE10 faktiskt
+* men vi behöver vendor prefixes
+```
 
 ---
 export default CenteredLayout
@@ -107,7 +145,7 @@ export default CenteredLayout
 
 
 ---
-KOD EXEMPEL AUTOPREFIXER
+<Image src="./assets/autoprefixer-example.png" size="contain" height="80vh" />
 
 ---
 export default CenteredLayout
@@ -124,10 +162,10 @@ export default CenteredLayout
 ---
 <Image src="./assets/bad-css.jpeg" size="contain" height="80vh" />
 
-<Notes>
-Varför måste vi använda !important egentligen?
-"Never mind the cascade" 
-</Notes>
+```notes
+* Varför måste vi använda !important egentligen?
+* hoppa över "the cascade" ....varför??
+```
 
 ---
 export default CenteredLayout
@@ -136,6 +174,13 @@ export default CenteredLayout
 ### --- CSS MODULES ---
 
 <Image src="./assets/back-to-the-future-2.gif" size="contain" height="50vh" />
+
+```notes
+* Modulär CSS
+* eftersom vi skriver vår javascript i moduler kan vi göra detsamma med CSS:en
+* CSS:en hör liksom ihop med javascriptet på ett annat sätt
+* CSS Modules kommer från ett annat koncept, BEM
+```
 
 ---
 export default CenteredLayout
@@ -147,18 +192,18 @@ export default CenteredLayout
 ---
 <Image src="./assets/css-modules.png" size="contain"  height="80vh" />
 
-<Notes>
-egentligen är det samma sak som BEM men vi slipper hitta på klassnamn.
-"A CSS Module is a CSS file in which all class names and animation names are scoped locally by default"
-</Notes>
+```notes
+* egentligen är det samma sak som BEM men vi slipper hitta på klassnamn.
+* "A CSS Module is a CSS file in which all class names and animation names are scoped locally by default"
+```
 
 ---
 <Image src="./assets/css-modules-structure.png" size="contain" height="80vh" />
 
-<Notes>
-vi kan se att modulen/komponenten hör ihop med sin css.
-vi kan vara säkra på att den CSS:en bara hör till den komponenten
-</Notes>
+```notes
+* vi kan se att modulen/komponenten hör ihop med sin css.
+* vi kan vara säkra på att den CSS:en bara hör till den komponenten
+```
 
 ---
 export default CenteredLayout
@@ -171,10 +216,57 @@ export default CenteredLayout
 ---
 <Image src="./assets/css-in-js.png" size="contain" height="80vh" />
 
+```notes
+Från CSS modules är steget egentligen inte särskilt långt till att faktiskt flytta in CSS:en i javascriptet.
+Då kan vi nyttja en massa andra saker som javascript till exempel
+```
 ---
-EXEMPEL PÅ CSS-IN-JS
+
+<CodeSurfer 
+    code={require("!raw-loader!./examples/button-css-modules.js")}
+    lang="jsx"
+    showNumbers={true}
+    title="A Button with css-modules"    
+    steps={[
+        {lines: [2, 4, 8], range: [14,18]},
+        {lines: [30, 15], range: [10,12]}
+    ]}
+/>
+
+```notes
+Ett av problemen med SCSS eller LESS (abstraktioner för att skriva CSS) eller för den delen CSS modules är att man fortfarande
+måste hantera CSS klasser. Dvs du måste skriva logiken i javascript för att switcha mellan olika css klasser.
+```
 
 ---
-SLUT
+
+<CodeSurfer 
+    code={require("!raw-loader!./examples/button-css-in-js.js")}
+    lang="jsx"
+    showNumbers={false}
+    title="A Button with css-in-js"    
+    steps={[
+        {range: [13, 24]},
+        {lines: [23], range: [3, 11]},
+    ]}
+/>
+
+```notes
+* Med styled-components använder man string interpolation, dvs man kan analysera innehållet i strängen.
+* är det en funktion så ropar man på funktionen med dom props som komponenten fick in, dvs error=true
+```
+
+---
+<Image src="./assets/batman.gif" size="contain" height="80vh" />
+
+```notes
+* slutssatsen är väl att man är superhjälte igen
+* med hjälp av flexbox, css grid, autoprefixer och css-in-js
+```
+---
+export default CenteredLayout
+
+# CSS
+## -- THE END --
 
 
