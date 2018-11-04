@@ -15,7 +15,7 @@
     },
     "scripts": {
         "start": "mdx-deck index.mdx --port=9000 --no-open",
-        "build": "yarn assets && mdx-deck build index.mdx",
-        "assets": "mkdir -p dist && cp -R assets dist/"
+        "build": "yarn assets&&mdx-deck build index.mdx --no-html",
+        "assets": "mkdir dist&&cp -R assets dist/"
     }
 }
